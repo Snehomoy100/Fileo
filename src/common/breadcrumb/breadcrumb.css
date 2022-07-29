@@ -1,0 +1,44 @@
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 22px;
+}
+
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+.make-light {
+    color: grey;
+}
+
+.navigate-back {
+    border: 1px grey solid;
+    padding: 5px;
+    margin-right: 30px;
+    border-radius: 100px;
+}
+
+.no-pointer-events {
+  pointer-events: none;
+}
+
+.disable {
+  opacity: 0.3;
+  cursor: default;
+}

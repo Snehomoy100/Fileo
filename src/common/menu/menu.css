@@ -1,0 +1,31 @@
+.menu-parent {
+  box-shadow: var(--box-shadow);
+  width: max-content;
+  border-radius: 8px;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+}
+
+.menu-element {
+padding: 10px 30px 12px 15px;
+}
+
+.menu-element:hover {
+    background-color: var(--theme-color);
+    cursor: pointer;
+}
+
+.element1:hover {
+    border-radius: 8px 8px 0 0;
+}
+
+.delete {
+    color: red;
+}
+
+.delete:hover {
+    background-color: red;
+    color: white;
+    border-radius: 0 0 8px 8px;
+}

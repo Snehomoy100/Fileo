@@ -1,0 +1,30 @@
+.add-folder-parent {
+    cursor: pointer;
+    float: left;
+    margin: 0 15px 15px 15px;
+}
+
+.add-folder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 85px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 20px;
+    position: relative;
+    border: 4px dotted grey;
+    color: grey;
+    font-size: xx-large;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.add-folder:hover {
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+}
+
+.add-folder-text {
+    color: grey;
+    margin: 16px
+}

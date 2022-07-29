@@ -1,0 +1,20 @@
+.accordion {
+    width: 100%;
+    border-left: 1px solid rgb(188, 188, 188);
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    cursor: pointer;
+    background-color: var(--grey-background);
+}
+
+.accordion-button:hover {
+    background-color: rgb(188, 188, 188);
+}
+
+.accordion-child {
+    padding: 0px 0px 0px 10px;
+}

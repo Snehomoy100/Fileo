@@ -1,0 +1,22 @@
+.menu-parent {
+    box-shadow: var(--box-shadow);
+    width: max-content;
+    border-radius: 8px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .menu-element {
+  padding: 10px 30px 12px 15px;
+  }
+  
+  .menu-element:hover {
+      background-color: var(--theme-color);
+      color: white;
+      cursor: pointer;
+  }
+  
+  .element1:hover {
+      border-radius: 8px;
+  }
