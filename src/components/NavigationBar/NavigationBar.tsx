@@ -44,7 +44,7 @@ const Navbar = ({ setIsOpen }: propTypes) => {
   const handleChange = (value: any) => {
     dispatch(setQuery({ query: value, globalState: data }));
   }
-  function debounce(func: any) {
+  const debounce = (func: any) => {
     let timer: any;
     return (...args: any) => {
       const context: any = this;
