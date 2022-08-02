@@ -1,0 +1,52 @@
+.di204Row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+
+}
+.di123Col {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    margin-left: 10px;
+    width: 130px;
+    height: 100px;
+    margin: 10px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.di123Col:hover {
+    background-color: aliceblue;
+}
+
+.di019Image{
+    width: 50px;
+}
+
+.di039ColContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.di289IconStyle {
+    font-size: 4rem;
+    color: #4ab8ff;
+}
+.di029ItemName {
+    margin-top: 12px;
+    font-size: 0.9rem;
+}

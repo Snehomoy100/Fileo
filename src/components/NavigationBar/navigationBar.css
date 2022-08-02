@@ -1,0 +1,78 @@
+.nb719Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    flex-direction: column-reverse;
+}
+.nb527NavbarLeftContainer{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.nb267NavbarRightContainer {
+    border-bottom: 1px thin #758283;
+    padding: 5px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+@media only screen and (max-width:600px)  {
+    .nb267NavbarRightContainer{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: start;
+    }
+    .nb341Input{
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+}
+
+.nb341Input {
+    padding: 9px 14px;
+    border: 2px thin solid #d4d4d4;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    border-radius: 10px;
+    width: 350px;
+    background-color: #ffffff;
+}
+
+::placeholder {
+    font-weight: 200;
+}
+
+.nb172BreadcrumbItem {
+    color: #120E43;
+    cursor: pointer;
+    font-weight: 1000;
+    font-size: large;
+    padding-left: 7px;
+}
+
+.nb278active {
+    color: #6c757d;
+}
+
+.nb452Icon {
+    padding-left: 25px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+}
+
+
+.nb361OpenModalIcon{
+    border: 3px solid rgba(83, 83, 83,0.3);
+    cursor: pointer;
+    background-color: #35BDD0;
+    align-self: center;
+    padding: 12px;
+    font-weight: 200;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px;
+    color: white;
+    margin: 0px;
+}

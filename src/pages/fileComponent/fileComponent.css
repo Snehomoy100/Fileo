@@ -1,0 +1,96 @@
+.fc901Gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.fc901Gallery .fc018Pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+
+.fc901Gallery .fc018Pics:hover {
+    filter: opacity(0.8);
+}
+
+@media (max-width:990px) {
+    .fc901Gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:480px) {
+    .fc901Gallery {
+        grid-template-columns: repeat(1, 1fr);
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+.fc267Modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    transition: opacity .4s ease, visibility .4s ease, transform .5s ease-in-out ;
+    visibility:hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 999;
+}
+.fc267Modal.fc781Open{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+.fc267Modal img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+}
+
+
+.fc891CloseIcon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 2rem;
+    height:2rem;
+    padding:5px;
+    background-color:rgba(0, 0, 0, 0.4);
+    color:#ffffff;
+    cursor:pointer;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.fc018Pics{
+    /* width: 400px; */
+}
+.fc999Image{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
