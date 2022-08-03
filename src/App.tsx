@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-import FileComponent from "./views/fileComponent/fileComponent";
-import HomePage from "./views/homePage/homePage";
-import FolderComponent from "./views/folderComponent/folderComponent";
+import FileComponent from "./views/FileView/fileComponent";
+import HomePage from "./views/HomeView/HomeView";
+import FolderComponent from "./views/FolderView/FolderView";
 import Sidebar from "./components/SideBar/SideBar";
 import Modal from "./components/CreationModal/CreationModal";
 import Navbar from "./components/NavigationBar/NavigationBar";

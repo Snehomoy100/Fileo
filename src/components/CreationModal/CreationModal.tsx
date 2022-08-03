@@ -70,7 +70,7 @@ const Modal = ({ setIsOpen }: props) => {
                 className="ml019CloseBtn"
                 onClick={() => setIsOpen(false)}
               >
-                <i className="fa-solid fa-xmark"></i>
+                Close
               </button>
             </div>
             <h2 className="ml001Heading">Create New</h2>

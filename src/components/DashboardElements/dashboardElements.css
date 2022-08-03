@@ -3,10 +3,11 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    padding-right: 3rem;
+    margin-right: -10px;
+    margin-left: -10px;
+    padding-right: 5px;
     padding-top: 1.5rem;
+    padding-left: 5px;
 
 }
 .di123Col {
@@ -16,9 +17,11 @@
     margin-right: 30px;
     margin-left: 10px;
     width: 130px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 100px;
     margin: 10px;
-    background-color: #fff;
+    background-color: #E5D68A;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -42,10 +45,7 @@
     flex-direction: column;
 }
 
-.di289IconStyle {
-    font-size: 4rem;
-    color: #4ab8ff;
-}
+
 .di029ItemName {
     margin-top: 12px;
     font-size: 0.9rem;

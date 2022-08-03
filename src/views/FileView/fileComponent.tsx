@@ -14,14 +14,14 @@ const FileComponent = () => {
   const [page, setPage] = useState(1);
   const [error, setError] = useState("");
 
-  const CLIENT_ID = "CU5Tu16fnl7ZXpw90r4tzfPSQEI501KkWWyQiRHF4ng";
+  const API_KEY = "CU5Tu16fnl7ZXpw90r4tzfPSQEI501KkWWyQiRHF4ng";
 
   const getPhotos = async () => {
     setError("");
     setLoading(true);
     axios
       .get(
-        `https://api.unsplash.com/search/photos?query=${query}&client_id=${CLIENT_ID}&page=${page}&per_page=20&orientation=landscape`
+        `https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}&page=${page}&per_page=20&orientation=landscape`
       )
       .then((res) => {
         res.data.results.map((item: any) => {
