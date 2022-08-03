@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { dataType } from "../../types/interfaces";
+import { DataTypes } from "../../types/CustomInterfaces";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import { setQuery } from "../../redux/actionCreators/searchActionCreator";
 
@@ -16,8 +16,8 @@ const Navbar = ({ setIsOpen }: propTypes) => {
   const data = useSelector((state: any) => state.fileFolder);
   const searchQuery = useSelector((state: any) => state.search.query);
   const [str, setStr] = useState("");
-  let getCurrentObject = {} as dataType;
-  const eachRecursive = (obj: dataType, id: string) => {
+  let getCurrentObject = {} as DataTypes;
+  const eachRecursive = (obj: DataTypes, id: string) => {
     if (obj.id === id) {
       {
         getCurrentObject = obj;
@@ -87,12 +87,10 @@ const Navbar = ({ setIsOpen }: propTypes) => {
           type="text"
           className="nb452Icon nb341Input"
           placeholder="Search"
-          // value={str}
           onChange={
             (e) => {
               optimizedFn(e.target.value);
             }
-            // dispatch(setQuery({ query: e.target.value, globalState: data }))
           }
         />
       </div>

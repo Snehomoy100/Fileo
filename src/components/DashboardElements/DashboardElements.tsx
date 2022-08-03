@@ -2,9 +2,9 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { dataType } from "../../types/interfaces";
+import { DataTypes } from "../../types/CustomInterfaces";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
-import ContextMenu from "../contextMenu/contextMenu";
+import ContextMenu from "../MainMenu/MainMenu";
 import homeFolder from "../../assets/homeFolder.png";
 import desktopFolder from "../../assets/desktopFolder.png";
 import downloads from "../../assets/downloads.png";
@@ -13,13 +13,14 @@ import fileIcon from "../../assets/fileIcon.png";
 import bin from "../../assets/bin.png";
 import folder from "../../assets/folder.png";
 
-import "./dashboardItems.css";
+import "./dashboardElements.css";
+
 import DetailsModal from "../ElementDetailsModal/ElementDetailsModal";
 
 const DashboardItems = ({ items }: propTypes) => {
   const [open, setOpen] = useState(false);
-  const [itemRightClicked, setItemRightClicked] = useState<dataType>(
-    {} as dataType
+  const [itemRightClicked, setItemRightClicked] = useState<DataTypes>(
+    {} as DataTypes
   );
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const DashboardItems = ({ items }: propTypes) => {
 
   const handleContextMenuClick = (
     e: React.MouseEvent<HTMLDivElement>,
-    item: dataType
+    item: DataTypes
   ) => {
     e.preventDefault();
     setCoordinates({ x: e.pageX, y: e.pageY });
@@ -56,25 +57,14 @@ const DashboardItems = ({ items }: propTypes) => {
   };
 
   const getFolderIcon = (name: string) => {
-    switch (name) {
-      case "Home":
-        return <img src={homeFolder} className="di019Image" alt="home" />;
-      case "Desktop":
-        return <img src={desktopFolder} className="di019Image" alt="desktop" />;
-      case "Downloads":
-        return <img src={downloads} className="di019Image" alt="downloads" />;
-      case "Documents":
-        return <img src={documents} className="di019Image" alt="documents" />;
-      case "Recycle Bin":
-        return <img src={bin} className="di019Image" alt="bin" />;
-
-      default:
-        return <img src={folder} className="di019Image" />;
+    if(name) {
+      return <img src={homeFolder} className="di019Image" alt="home" />;
     }
+
   };
   const [openDetails, setOpenDetails] = useState(false);
-  const [showDetailsOfItem, setShowDetailsOfItem] = useState<dataType>(
-    {} as dataType
+  const [showDetailsOfItem, setShowDetailsOfItem] = useState<DataTypes>(
+    {} as DataTypes
   );
   // console.log("show details", showDetailsOfItem, openDetails);
   return (
@@ -91,7 +81,7 @@ const DashboardItems = ({ items }: propTypes) => {
       {openDetails && (
         <DetailsModal setIsOpen={setOpenDetails} item={showDetailsOfItem} />
       )}
-      {items?.map((item: dataType, idx: number) => (
+      {items?.map((item: DataTypes, idx: number) => (
         <div
           onClick={handleClick}
           onContextMenu={(e) => handleContextMenuClick(e, item)}
@@ -123,7 +113,7 @@ const DashboardItems = ({ items }: propTypes) => {
 };
 
 type propTypes = {
-  items: dataType[];
+  items: DataTypes[];
 };
 
 export default DashboardItems;

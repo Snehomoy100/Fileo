@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { dataType } from "../../types/interfaces";
+import { DataTypes } from "../../types/CustomInterfaces";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import homeFolder from "../../assets/homeFolder.png";
 import desktopFolder from "../../assets/desktopFolder.png";
@@ -14,7 +14,7 @@ import fileIcon from "../../assets/fileIcon.png";
 
 import "./sideBar.css";
 
-const getFolderIcon = (data: dataType) => {
+const getFolderIcon = (data: DataTypes) => {
   const { name } = data;
   
   if(name){
@@ -49,7 +49,7 @@ function Sidebar({ data }: propTypes) {
             <div className="sb818ItemText">{data.name}</div>
           </div>
           <div className="">
-            {data.children.map((item: dataType, idx: number) => (
+            {data.children.map((item: DataTypes, idx: number) => (
               <div key={idx} style={{ marginLeft: 5 }} className="sb273Items">
                 <Sidebar data={item} />
               </div>
@@ -72,7 +72,7 @@ function Sidebar({ data }: propTypes) {
 }
 
 interface propTypes {
-  data: dataType;
+  data: DataTypes;
 }
 
 export default Sidebar;

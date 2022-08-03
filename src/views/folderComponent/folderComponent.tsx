@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import DashboardItems from "../../components/dashboardItems/dashboardItems";
-import { dataType, globalType } from "../../types/interfaces";
+import DashboardItems from "../../components/DashboardElements/DashboardElements";
+import { DataTypes, GlobalTypes } from "../../types/CustomInterfaces";
 
 const FolderComponent = (): JSX.Element => {
   const { folderId } = useParams();
-  let allFoldersHere: dataType = {} as dataType;
-  const eachRecursive = (obj: dataType, id: string | undefined) => {
+  let allFoldersHere: DataTypes = {} as DataTypes;
+  const eachRecursive = (obj: DataTypes, id: string | undefined) => {
     if (obj.id === id) {
       {
         allFoldersHere = obj;
@@ -18,7 +18,7 @@ const FolderComponent = (): JSX.Element => {
     }
   };
 
-  const data = useSelector((state:globalType) => state.fileFolder);
+  const data = useSelector(( state: GlobalTypes ) => state.fileFolder);
   eachRecursive(data, folderId);
   if (allFoldersHere.children.length !== 0) {
     return (

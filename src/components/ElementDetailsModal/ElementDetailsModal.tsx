@@ -4,6 +4,7 @@ import "./elementDetailsModal.css";
 
 const DetailsModal = ({ setIsOpen, item }: any) => {
   console.log(item);
+  
   return (
     <>
       <div className="darkBG" onClick={() => setIsOpen(false)} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import DashboardItems from "../dashboardItems/dashboardItems";
+import DashboardItems from "../DashboardElements/DashboardElements";
 
 
 import "./searchSpace.css";

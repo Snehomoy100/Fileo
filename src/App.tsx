@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-import FileComponent from "./pages/fileComponent/fileComponent";
-import HomePage from "./pages/homePage/homePage";
-import FolderComponent from "./pages/folderComponent/folderComponent";
+import FileComponent from "./views/fileComponent/fileComponent";
+import HomePage from "./views/homePage/homePage";
+import FolderComponent from "./views/folderComponent/folderComponent";
 import Sidebar from "./components/SideBar/SideBar";
 import Modal from "./components/CreationModal/CreationModal";
 import Navbar from "./components/NavigationBar/NavigationBar";
 import SearchComponent from "./components/SearchSpace/SearchSpace";
 
 import "./App.css";
-import { globalType } from "./types/interfaces";
+import { GlobalTypes } from "./types/CustomInterfaces";
 import { changeFolder } from "./redux/actionCreators/currentFolderActionCreator";
 
 const App = (props: any) => {
@@ -21,7 +21,7 @@ const App = (props: any) => {
 
   const dispatch = useDispatch();
   const searchQuery = useSelector((state: any) => state?.search?.query);
-  const { rootFolderDetails } = useSelector((state: globalType) => ({
+  const { rootFolderDetails } = useSelector((state: GlobalTypes) => ({
     rootFolderDetails: state.fileFolder,
   }));
   const navigatge = useNavigate();

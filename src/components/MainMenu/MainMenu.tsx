@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteItem } from "../../redux/actionCreators/fileFolderActionCreators";
-import { dataType } from "../../types/interfaces";
+import { DataTypes } from "../../types/CustomInterfaces";
 import DetailsModal from "../ElementDetailsModal/ElementDetailsModal";
 
-import "./contextMenu.css";
+import "./mainMenu.css";
 
 const ContextMenu = ({
   cordinates,
@@ -45,9 +45,9 @@ const ContextMenu = ({
 
 type propTypes = {
   cordinates: { x: number; y: number };
-  item: dataType;
+  item: DataTypes;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  setShowDetailsOfItem: React.Dispatch<React.SetStateAction<dataType>>;
+  setShowDetailsOfItem: React.Dispatch<React.SetStateAction<DataTypes>>;
   setOpenDetails: React.Dispatch<React.SetStateAction<boolean>>;
 };
 

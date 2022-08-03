@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import DashboardItems from "../../components/dashboardItems/dashboardItems";
-import { globalType } from "../../types/interfaces";
+import DashboardItems from "../../components/DashboardElements/DashboardElements";
+import { GlobalTypes } from "../../types/CustomInterfaces";
 
 const HomePage = ({children}:any) => {
 
