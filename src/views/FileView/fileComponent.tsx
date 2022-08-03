@@ -64,7 +64,7 @@ const FileComponent = () => {
         hasMore={hasMore}
         height={"100vh"}
         loader={<Loader />}
-        endMessage={<h1>The End</h1>}
+        endMessage={<h1>Couldn't find anything</h1>}
       >
         <>
           <div className={modal ? "fc267Modal fc781Open" : "fc267Modal"}>
