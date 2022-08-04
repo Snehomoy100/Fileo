@@ -4,16 +4,16 @@ import { deleteItem } from "../../redux/actionCreators/fileFolderActionCreators"
 import { DataTypes } from "../../types/CustomInterfaces";
 import DetailsModal from "../ElementDetailsModal/ElementDetailsModal";
 
-import "./mainMenu.css";
+import "./fileInfo.css";
 
-const ContextMenu = ({
+const FileInfo = ({
   cordinates,
   item,
   setOpen,
   setShowDetailsOfItem,
   setOpenDetails
 }: propTypes) => {
-  // const [openDetails, setOpenDetails] = useState(true);
+
   const dispatch = useDispatch();
   const { id } = item;
 
@@ -51,4 +51,4 @@ type propTypes = {
   setOpenDetails: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default ContextMenu;
+export default FileInfo;

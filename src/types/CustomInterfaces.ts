@@ -13,3 +13,4 @@ export interface GlobalTypes {
     currentFolder: string;
     fileFolder: DataTypes;   
 }
+

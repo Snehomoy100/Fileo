@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { DataTypes } from "../../types/CustomInterfaces";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
-import ContextMenu from "../MainMenu/MainMenu";
+import FileInfo from "../FileInfo/FileInfo";
 import homeFolder from "../../assets/homeFolder.png";
 import desktopFolder from "../../assets/desktopFolder.png";
 import downloads from "../../assets/downloads.png";
@@ -70,7 +70,7 @@ const DashboardItems = ({ items }: propTypes) => {
   return (
     <div className="di204Row">
       {open && (
-        <ContextMenu
+        <FileInfo
           setOpen={setOpen}
           cordinates={coordinates}
           item={itemRightClicked}

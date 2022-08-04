@@ -16,7 +16,7 @@ const intitialState = {
   children: [
     {
       name: "Home",
-      id: "iiebjdicdcfiejegecff",
+      id: "bcwejnnvwngjnfevbdbfc",
       isFolder: true,
       children: [],
       isAdmin: true,
@@ -30,7 +30,7 @@ const intitialState = {
         },
         {
           name: "Home",
-          link: "iiebjdicdcfiejegecff",
+          link: "bcwejnnvwngjnfevbdbfc",
         },
       ],
     }

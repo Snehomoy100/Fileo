@@ -2,15 +2,18 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-import FileComponent from "./views/FileView/fileComponent";
-import HomePage from "./views/HomeView/HomeView";
-import FolderComponent from "./views/FolderView/FolderView";
-import Sidebar from "./components/SideBar/SideBar";
-import Modal from "./components/CreationModal/CreationModal";
-import Navbar from "./components/NavigationBar/NavigationBar";
-import SearchComponent from "./components/SearchSpace/SearchSpace";
+import NavigationBar from "./components/NavigationBar/NavigationBar";
+import SideBar from "./components/SideBar/SideBar";
+import SearchSpace from "./components/SearchSpace/SearchSpace";
+import HomeView from "./views/HomeView/HomeView";
+import FileView from "./views/FileView/FileView";
+import FolderView from "./views/FolderView/FolderView";
+import CreationModal from "./components/CreationModal/CreationModal";
+
 
 import "./App.css";
+
+
 import { GlobalTypes } from "./types/CustomInterfaces";
 import { changeFolder } from "./redux/actionCreators/currentFolderActionCreator";
 
@@ -34,25 +37,25 @@ const App = (props: any) => {
   
   return (
     <div className="app10AppComponent">
-      {open && <Modal setIsOpen={setOpen} />}
-      <div className="app11Sidebar">
-        <Sidebar data={data} />
+      {open && <CreationModal setIsOpen={setOpen} />}
+      <div className="app10Sidebar">
+        <SideBar data={data} />
       </div>
-      <div className="app12Dashboard">
-        <Navbar setIsOpen={setOpen} isOpen={open} />
+      <div className="app10Dashboard">
+        <NavigationBar setIsOpen={setOpen} isOpen={open} />
 
         <Routes>
           {searchQuery?.length > 0 ? (
-            <Route path="/" element={<SearchComponent />} />
+            <Route path="/" element={<SearchSpace />} />
           ) : (
             <Route
               path="/"
-              element={<HomePage children={rootFolderDetails.children} />}
+              element={<HomeView children={rootFolderDetails.children} />}
             />
           )}
 
-          <Route path="/:folderId" element={<FolderComponent />} />
-          <Route path="/file/:query/:fileId" element={<FileComponent />} />
+          <Route path="/:folderId" element={<FolderView />} />
+          <Route path="/file/:query/:fileId" element={<FileView />} />
         </Routes>
       </div>
     </div>

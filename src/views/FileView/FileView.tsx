@@ -3,10 +3,14 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import "./fileComponent.css";
-import Loader from "./loader";
-const FileComponent = () => {
-  const { query, fileId } = useParams();
+import "../../components/CommonLoader/commonLoader.css";
+
+import CommonLoader from "../../components/CommonLoader/CommonLoader";
+
+
+const FileView = () => {
+
+  const { query } = useParams();
 
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
@@ -59,12 +63,12 @@ const FileComponent = () => {
   if (error.length === 0) {
     return (
       <InfiniteScroll
-        dataLength={data.length} //This is important field to render the next data
+        dataLength={data.length}
         next={getPhotos}
         hasMore={hasMore}
         height={"100vh"}
-        loader={<Loader />}
-        endMessage={<h1>Couldn't find anything</h1>}
+        loader={<CommonLoader />}
+        endMessage={<h1>Oops..! Couldn't find anything</h1>}
       >
         <>
           <div className={modal ? "fc267Modal fc781Open" : "fc267Modal"}>
@@ -99,4 +103,4 @@ const FileComponent = () => {
   }
 };
 
-export default FileComponent;
+export default FileView;

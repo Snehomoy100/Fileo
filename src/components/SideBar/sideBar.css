@@ -1,11 +1,4 @@
-.sb712Sidebar{
-    position: fixed;
-    height: 100%;
-    width: 18%;
-    z-index: 10;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-}
-.sb279Item{
+.sb30Item{
     display: flex;
     margin-bottom: 10px;
     align-items: center;
@@ -13,16 +6,16 @@
     cursor: pointer;
     padding: 10px;
 }
-.sb279Item:hover{
+.sb30Item:hover{
     background-color:#e7ecf0;
 }
 
-.sb828ItemImage{
+.sb30ItemIcon{
     width: 19px;
     margin-top: 3px;
 }
 
-.sb818ItemText{
+.sb30ItemText{
     margin-left: 10px;
     color: #000;
     font-size: 14px;

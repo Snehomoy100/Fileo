@@ -4,11 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 import { DataTypes } from "../../types/CustomInterfaces";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
-import homeFolder from "../../assets/homeFolder.png";
-import desktopFolder from "../../assets/desktopFolder.png";
-import downloads from "../../assets/downloads.png";
-import documents from "../../assets/documents.png";
-import bin from "../../assets/bin.png";
 import folder from "../../assets/folder.png";
 import fileIcon from "../../assets/fileIcon.png";
 
@@ -18,11 +13,11 @@ const getFolderIcon = (data: DataTypes) => {
   const { name } = data;
   
   if(name){
-    return <img className="sb828ItemImage" src={folder} alt="home" />;
-  }
+    return <img className="sb30ItemIcon" src={folder} alt="home" />;
+  } 
 };
 
-function Sidebar({ data }: propTypes) {
+const SideBar = ({ data }: propTypes) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -41,17 +36,17 @@ function Sidebar({ data }: propTypes) {
   };
 
   return (
-    <div className="">
+    <div>
       {data?.isFolder === true ? (
         <>
-          <div className="sb279Item" onClick={() => handleClick(data)}>
-            <div className="sb682ImageContainer">{getFolderIcon(data)}</div>
-            <div className="sb818ItemText">{data.name}</div>
+          <div className="sb30Item" onClick={() => handleClick(data)}>
+            <div className="sb30ImageContainer">{getFolderIcon(data)}</div>
+            <div className="sb30ItemText">{data.name}</div>
           </div>
-          <div className="">
+          <div>
             {data.children.map((item: DataTypes, idx: number) => (
-              <div key={idx} style={{ marginLeft: 5 }} className="sb273Items">
-                <Sidebar data={item} />
+              <div key={idx} style={{ marginLeft: 5 }} className="sb30Items">
+                <SideBar data={item} />
               </div>
             ))}
           </div>
@@ -62,8 +57,8 @@ function Sidebar({ data }: propTypes) {
             className="sb279Item"
             onClick={() => navigate(`/file/${data.name}/${data.id}`)}
           >
-            <img className="sb828ItemImage" src={fileIcon} alt="file" />
-            <p className="sb818ItemText">{data.name} </p>
+            <img className="sb30ItemIcon" src={fileIcon} alt="file" />
+            <p className="sb30ItemText">{data.name} </p>
           </div>
         </>
       )}
@@ -75,4 +70,4 @@ interface propTypes {
   data: DataTypes;
 }
 
-export default Sidebar;
+export default SideBar;

@@ -12,7 +12,7 @@ type props = {
 };
 
 
-const Modal = ({ setIsOpen }: props) => {
+const CreationModal = ({ setIsOpen }: props) => {
 
   const dispatch = useDispatch();
   
@@ -24,7 +24,7 @@ const Modal = ({ setIsOpen }: props) => {
 
   const [exactType, setExactType] = useState("");
 
-  const createNest = useSelector((state: any) => state.currentFolder);
+  const createInside = useSelector((state: any) => state.currentFolder);
 
   
 
@@ -38,7 +38,7 @@ const Modal = ({ setIsOpen }: props) => {
       creator: authorName,
       createdAt: new Date().toLocaleDateString(),
     };
-    dispatch(createItem({ createInside: createNest, item: data }));
+    dispatch(createItem({ createInside: createInside, item: data }));
     setIsOpen(false);
   };
 
@@ -55,30 +55,30 @@ const Modal = ({ setIsOpen }: props) => {
     };
 
 
-    dispatch(createItem({ createInside: createNest, item: data }));
+    dispatch(createItem({ createInside: createInside, item: data }));
     setIsOpen(false);
   };
 
   return (
     <>
-      <div className="ml900DarkBG" onClick={() => setIsOpen(false)} />
-      <div className="ml019Centered">
-        <div className="ml287Modal">
-          <div className=".ml100ModalHeader">
-            <div className="ml222CloseBtn">
+      <div className="cm20Background" onClick={() => setIsOpen(false)} />
+      <div className="cm20Centered">
+        <div className="cm20Modal">
+          <div className=".cm20ModalHeader">
+            <div className="cm20CloseBtn">
               <button
-                className="ml019CloseBtn"
+                className="cm20CloseBtn"
                 onClick={() => setIsOpen(false)}
               >
                 Close
               </button>
             </div>
-            <h2 className="ml001Heading">Create New</h2>
+            <h2 className="cm20Heading">Create New</h2>
           </div>
-          <div className="ml180FileOrFolder">
+          <div className="cm20FileOrFolder">
             <span
               onClick={() => setCanCreateFile(0)}
-              className={`ml094Btn ml291FolderButton ${
+              className={`cm20Btn ml291FolderButton ${
                 canCreateFile == 0 ? "ml129ActiveBtn" : ""
               }`}
             >
@@ -133,4 +133,4 @@ const Modal = ({ setIsOpen }: props) => {
 
 
 
-export default Modal;
+export default CreationModal;

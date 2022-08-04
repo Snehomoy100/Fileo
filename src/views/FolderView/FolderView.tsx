@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import DashboardItems from "../../components/DashboardElements/DashboardElements";
 import { DataTypes, GlobalTypes } from "../../types/CustomInterfaces";
 
-const FolderComponent = (): JSX.Element => {
+const FolderView = (): JSX.Element => {
   const { folderId } = useParams();
   let allFoldersHere: DataTypes = {} as DataTypes;
   const eachRecursive = (obj: DataTypes, id: string | undefined) => {
@@ -13,8 +13,8 @@ const FolderComponent = (): JSX.Element => {
         return obj;
       }
     }
-    for (var k in obj.children) {
-      eachRecursive(obj.children[k], id);
+    for (let iterator in obj.children) {
+      eachRecursive(obj.children[iterator], id);
     }
   };
 
@@ -27,7 +27,7 @@ const FolderComponent = (): JSX.Element => {
       </div>
     );
   }
-  return <div>Empty folder</div>;
+  return <div>Empty folder, Add something...!</div>;
 };
 
-export default FolderComponent;
+export default FolderView;

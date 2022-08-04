@@ -1,7 +1,7 @@
-import React from "react";
-import "./loader.css";
 
-const Loader = () => {
+import "./commonLoader.css";
+
+const CommonLoader = () => {
   return (
     <div className="loader">
       <div className="lds-roller">
@@ -18,4 +18,4 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default CommonLoader;

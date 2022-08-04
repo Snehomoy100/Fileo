@@ -8,15 +8,16 @@ import { setQuery } from "../../redux/actionCreators/searchActionCreator";
 
 import "./navigationBar.css";
 
-const Navbar = ({ setIsOpen }: propTypes) => {
+const NavigationBar = ({ setIsOpen }: propTypes) => {
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const currentFolder = useSelector((state: any) => state.currentFolder);
   const data = useSelector((state: any) => state.fileFolder);
-  const searchQuery = useSelector((state: any) => state.search.query);
-  const [str, setStr] = useState("");
+
   let getCurrentObject = {} as DataTypes;
+
   const eachRecursive = (obj: DataTypes, id: string) => {
     if (obj.id === id) {
       {
@@ -59,13 +60,13 @@ const Navbar = ({ setIsOpen }: propTypes) => {
   const optimizedFn = useCallback(debounce(handleChange), []);
 
   return (
-    <div className="nb719Navbar">
-      <div className="nb527NavbarLeftContainer">
-        <div className="nb192Breadcrumb">
+    <div className="nb50TheNavbar">
+      <div className="nb50NavbarLeftContainer">
+        <div className="nb50Breadcrumb">
           {getCurrentObject?.path?.map((item: any, index: number) => (
             <span
               key={index}
-              className={`nb172BreadcrumbItem ${
+              className={`nb50BreadcrumbItem ${
                 index === getCurrentObject.path.length - 1 ? "nb278active" : ""
               }`}
               onClick={() => handleClick(item.link)}
@@ -77,7 +78,7 @@ const Navbar = ({ setIsOpen }: propTypes) => {
           ))}
         </div>
       </div>
-      <div className="nb267NavbarRightContainer">
+      <div className="nb50NavbarRightContainer">
         <i
           className="fa-solid fa-plus nb361OpenModalIcon"
           onClick={() => setIsOpen(true)}
@@ -108,4 +109,4 @@ type path = {
   link: string;
 };
 
-export default Navbar;
+export default NavigationBar;

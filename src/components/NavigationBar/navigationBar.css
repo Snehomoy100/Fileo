@@ -1,16 +1,16 @@
-.nb719Navbar {
+.nb50TheNavbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
     flex-direction: column-reverse;
 }
-.nb527NavbarLeftContainer{
+.nb50NavbarLeftContainer{
     margin-top: 10px;
     width: 100%;
 }
 
-.nb267NavbarRightContainer {
+.nb50NavbarRightContainer {
     border-bottom: 1px thin #758283;
     padding: 5px;
     width: 100%;
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (max-width:600px)  {
-    .nb267NavbarRightContainer{
+    .nb50NavbarRightContainer{
         flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: start;
@@ -45,7 +45,7 @@
     font-weight: 200;
 }
 
-.nb172BreadcrumbItem {
+.nb50BreadcrumbItem {
     color: #120E43;
     cursor: pointer;
     font-weight: 1000;
