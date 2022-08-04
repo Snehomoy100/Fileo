@@ -1,9 +1,9 @@
-.cm901Menu{
+.fi60Menu{
 background-color: #fff;
     position: fixed;
     width: 230px;
 }
-.cm241MenuItem{
+.fi60MenuItem{
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
     color: #000;
@@ -19,6 +19,6 @@ background-color: #fff;
     
 }
 
-.cm241MenuItem:hover{
+.fi60MenuItem:hover{
     background-color: #f5f5f5;
 }

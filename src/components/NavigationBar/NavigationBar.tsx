@@ -67,7 +67,7 @@ const NavigationBar = ({ setIsOpen }: propTypes) => {
             <span
               key={index}
               className={`nb50BreadcrumbItem ${
-                index === getCurrentObject.path.length - 1 ? "nb278active" : ""
+                index === getCurrentObject.path.length - 1 ? "nb50active" : ""
               }`}
               onClick={() => handleClick(item.link)}
             >
@@ -80,14 +80,14 @@ const NavigationBar = ({ setIsOpen }: propTypes) => {
       </div>
       <div className="nb50NavbarRightContainer">
         <i
-          className="fa-solid fa-plus nb361OpenModalIcon"
+          className="fa-solid fa-plus nb50OpenModalIcon"
           onClick={() => setIsOpen(true)}
         >   Create
         </i>
         <input
           type="text"
-          className="nb452Icon nb341Input"
-          placeholder="Search"
+          className="nb50Icon nb50Input"
+          placeholder="Search a file/folder"
           onChange={
             (e) => {
               optimizedFn(e.target.value);

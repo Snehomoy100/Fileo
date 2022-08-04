@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
+
 import { deleteItem } from "../../redux/actionCreators/fileFolderActionCreators";
 import { DataTypes } from "../../types/CustomInterfaces";
-import DetailsModal from "../ElementDetailsModal/ElementDetailsModal";
 
 import "./fileInfo.css";
 
@@ -14,29 +15,42 @@ const FileInfo = ({
   setOpenDetails
 }: propTypes) => {
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = item;
 
-  const handleClick = () => {
-    dispatch(deleteItem(id));
-  };
+  const handleOpenClick = () => {
+    if (!item.isFolder) {
+      navigate(`/file/${item.name}/${id}`);
+      return;
+    }
+    dispatch(changeFolder(id));
+    navigate(`/${id}`);
+  }
 
-  const handleShowDetails = () => {
+  const handleShowDetailsClick = () => {
     setOpenDetails(true)
     setShowDetailsOfItem(item);
   };
 
+  const handleDeleteClick = () => {
+    dispatch(deleteItem(id));
+  };
+
+
   return (
     <div
       style={{ top: cordinates.y, left: cordinates.x }}
-      className="cm901Menu"
+      className="fi60Menu"
       onClick={() => setOpen(false)}
     >
-      <div className="cm241MenuItem">Open</div>
-      <div className="cm241MenuItem" onClick={handleShowDetails}>
+      <div className="fi60MenuItem" onClick={handleOpenClick}>
+        Open
+      </div>
+      <div className="fi60MenuItem" onClick={handleShowDetailsClick}>
         Show Details
       </div>
-      <div onClick={handleClick} className="cm241MenuItem">
+      <div onClick={handleDeleteClick} className="fi60MenuItem">
         Delete
       </div>
     </div>
