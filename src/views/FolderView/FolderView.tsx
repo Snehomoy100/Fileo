@@ -1,9 +1,11 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import DashboardItems from "../../components/DashboardElements/DashboardElements";
+
+import DashboardElements from "../../components/DashboardElements/DashboardElements";
 import { DataTypes, GlobalTypes } from "../../types/CustomInterfaces";
 
 const FolderView = (): JSX.Element => {
+  
   const { folderId } = useParams();
   let allFoldersHere: DataTypes = {} as DataTypes;
   const eachRecursive = (obj: DataTypes, id: string | undefined) => {
@@ -23,7 +25,7 @@ const FolderView = (): JSX.Element => {
   if (allFoldersHere.children.length !== 0) {
     return (
       <div>
-        <DashboardItems items={allFoldersHere.children} />
+        <DashboardElements items={allFoldersHere.children} />
       </div>
     );
   }

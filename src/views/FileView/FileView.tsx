@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import "../../components/CommonLoader/commonLoader.css";
-
 import CommonLoader from "../../components/CommonLoader/CommonLoader";
 
+import "../../components/CommonLoader/commonLoader.css";
 
 const FileView = () => {
 

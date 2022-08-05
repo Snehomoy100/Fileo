@@ -1,6 +1,8 @@
+import { DataTypes } from "../../types/CustomInterfaces";
+
 import "./elementDetailsModal.css";
 
-const DetailsModal = ({ setIsOpen, item }: any) => {
+const DetailsModal = ({ setIsOpen, item }: propTypes) => {
   return (
     <>
       <div className="darkBG" onClick={() => setIsOpen(false)} />
@@ -59,6 +61,11 @@ const DetailsModal = ({ setIsOpen, item }: any) => {
       </div>
     </>
   );
+};
+
+type propTypes = {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  item: DataTypes;
 };
 
 export default DetailsModal;

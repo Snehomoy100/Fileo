@@ -6,6 +6,7 @@
     cursor: pointer;
     padding: 8px;
 }
+
 .sb30Item:hover{
     background-color:#e7ecf0;
 }

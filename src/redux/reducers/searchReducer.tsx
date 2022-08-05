@@ -11,8 +11,8 @@ const searchRecursive = (state: any, results: any, query: string) => {
   if (query && query !== "" && stName.includes(query)) {
     results.push(state);
   }
-  for (let k in state?.children) {
-    searchRecursive(state.children[k], results, query);
+  for (let iterator in state?.children) {
+    searchRecursive(state.children[iterator], results, query);
   }
 };
 

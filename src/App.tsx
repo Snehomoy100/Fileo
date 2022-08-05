@@ -11,13 +11,13 @@ import FolderView from "./views/FolderView/FolderView";
 import CreationModal from "./components/CreationModal/CreationModal";
 
 
-import "./App.css";
+import "./app.css";
 
 
 import { GlobalTypes } from "./types/CustomInterfaces";
 import { changeFolder } from "./redux/actionCreators/currentFolderActionCreator";
 
-const App = (props: any) => {
+const App = () => {
 
   const data = useSelector((state: any) => state.fileFolder);
   const [open, setOpen] = useState(false);

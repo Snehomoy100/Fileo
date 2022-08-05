@@ -1,20 +1,21 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { DataTypes } from "../../types/CustomInterfaces";
+import { DataTypes, GlobalTypes } from "../../types/CustomInterfaces";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import { setQuery } from "../../redux/actionCreators/searchActionCreator";
 
 import "./navigationBar.css";
+
 
 const NavigationBar = ({ setIsOpen }: propTypes) => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const currentFolder = useSelector((state: any) => state.currentFolder);
-  const data = useSelector((state: any) => state.fileFolder);
+  const currentFolder = useSelector((state: GlobalTypes) => state.currentFolder);
+  const data = useSelector((state: GlobalTypes) => state.fileFolder);
 
   let getCurrentObject = {} as DataTypes;
 
@@ -25,13 +26,26 @@ const NavigationBar = ({ setIsOpen }: propTypes) => {
         return obj;
       }
     }
-    for (let k in obj.children) {
-      eachRecursive(obj.children[k], id);
+    for (let iterator in obj.children) {
+      eachRecursive(obj.children[iterator], id);
     }
   };
+
   eachRecursive(data, currentFolder);
 
-  const handleClick = (link: string) => {
+  const debounce = (func: Function) => {
+    let timer: any;
+    return (...args: any) => {
+      const context: any = this;
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        timer = null;
+        func.apply(context, args);
+      }, 700);
+    };
+  }
+
+  const handleOnClick = (link: string) => {
     if (link === "") {
       navigate("/");
       dispatch(setQuery({ query: "", globalState: data }));
@@ -42,22 +56,11 @@ const NavigationBar = ({ setIsOpen }: propTypes) => {
     navigate("/" + link);
   };
 
-  const handleChange = (value: any) => {
+  const handleClickChange = (value: string) => {
     dispatch(setQuery({ query: value, globalState: data }));
   }
-  const debounce = (func: any) => {
-    let timer: any;
-    return (...args: any) => {
-      const context: any = this;
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(() => {
-        timer = null;
-        func.apply(context, args);
-      }, 500);
-    };
-  }
 
-  const optimizedFn = useCallback(debounce(handleChange), []);
+  const optimizedFn = useCallback(debounce(handleClickChange), []);
 
   return (
     <div className="nb50TheNavbar">
@@ -69,7 +72,7 @@ const NavigationBar = ({ setIsOpen }: propTypes) => {
               className={`nb50BreadcrumbItem ${
                 index === getCurrentObject.path.length - 1 ? "nb50active" : ""
               }`}
-              onClick={() => handleClick(item.link)}
+              onClick={() => handleOnClick(item.link)}
             >
               {item.name} {` `}
               {`>  `}
@@ -104,9 +107,5 @@ type propTypes = {
   isOpen: boolean;
 };
 
-type path = {
-  name: string;
-  link: string;
-};
 
 export default NavigationBar;

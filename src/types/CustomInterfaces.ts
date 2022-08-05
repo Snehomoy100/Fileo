@@ -1,16 +1,24 @@
 
-export interface DataTypes {
+export type DataTypes = {
     children: DataTypes[];
     path: [{ name: string, id: string }];
     isAdmin: boolean;
     isFolder: boolean;
     name: string;
     id: string;
+    type: string;
+    createdAt: string;
+    creator: string;
 }
 
 
-export interface GlobalTypes {
+export type GlobalTypes = {
     currentFolder: string;
-    fileFolder: DataTypes;   
+    fileFolder: DataTypes;  
+    search: SearchType 
 }
 
+type SearchType = {
+    query: string;
+    searchResult: DataTypes[];
+}

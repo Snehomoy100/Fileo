@@ -1,23 +1,18 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { DataTypes } from "../../types/CustomInterfaces";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
+import DetailsModal from "../ElementDetailsModal/ElementDetailsModal";
 import FileInfo from "../FileInfo/FileInfo";
 import homeFolder from "../../assets/homeFolder.png";
-import desktopFolder from "../../assets/desktopFolder.png";
-import downloads from "../../assets/downloads.png";
-import documents from "../../assets/documents.png";
 import fileIcon from "../../assets/fileIcon.png";
-import bin from "../../assets/bin.png";
 import folder from "../../assets/folder.png";
 
 import "./dashboardElements.css";
 
-import DetailsModal from "../ElementDetailsModal/ElementDetailsModal";
-
-const DashboardItems = ({ items }: propTypes) => {
+const DashboardElements = ({ items }: propTypes) => {
   const [open, setOpen] = useState(false);
   const [itemRightClicked, setItemRightClicked] = useState<DataTypes>(
     {} as DataTypes
@@ -31,6 +26,13 @@ const DashboardItems = ({ items }: propTypes) => {
       setOpen(false);
     });
   }, [coordinates]);
+
+  const getFolderIcon = (name: string) => {
+    if(name) {
+      return <img src={homeFolder} className="di019Image" alt="home" />;
+    }
+
+  };
 
   const handleDoubleClick = (name: string, id: string, isFolder: boolean) => {
     if (!isFolder) {
@@ -56,17 +58,13 @@ const DashboardItems = ({ items }: propTypes) => {
     setOpen(false);
   };
 
-  const getFolderIcon = (name: string) => {
-    if(name) {
-      return <img src={homeFolder} className="di019Image" alt="home" />;
-    }
 
-  };
   const [openDetails, setOpenDetails] = useState(false);
   const [showDetailsOfItem, setShowDetailsOfItem] = useState<DataTypes>(
     {} as DataTypes
   );
-  // console.log("show details", showDetailsOfItem, openDetails);
+
+  
   return (
     <div className="di204Row">
       {open && (
@@ -116,4 +114,4 @@ type propTypes = {
   items: DataTypes[];
 };
 
-export default DashboardItems;
+export default DashboardElements;
