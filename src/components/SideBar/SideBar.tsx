@@ -54,13 +54,14 @@ const SideBar = ({ data }: propTypes) => {
       ) : (
         <>
           <div
-            className="sb279Item"
+            className="sb30Item"
             onClick={() => navigate(`/file/${data.name}/${data.id}`)}
           >
             <img className="sb30ItemIcon" src={fileIcon} alt="file" />
             <p className="sb30ItemText">{data.name} </p>
           </div>
         </>
+
       )}
     </div>
   );

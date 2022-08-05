@@ -1,4 +1,6 @@
 /* @src/components/Modal.module.css */
+
+/* for applying the same font over the modal as well */
 * {
     font-family: 'Mali', cursive;
 }
@@ -70,24 +72,24 @@
     border-radius: 10px 0px 0px 10px;
 }
 
-.ml294FileButton {
+.cm20FileButton {
     border-radius: 0px 10px 10px 0;
 }
 
-.ml129ActiveBtn {
+.cm20ActiveBtn {
     background-color: #5A20CB;
     color: white;
     border: none;
 }
 
-.ml291ModalContent {
+.cm20ModalContent {
     padding: 10px;
     font-size: 14px;
     color: #2c3e50;
     text-align: center;
 }
 
-.ml501ModalInput {
+.cm20ModalInput {
     padding: 15px 10px;
     width: 78%;
     border: thin solid #d4d4d4;
@@ -103,22 +105,26 @@
     color: rgb(206, 206, 206);
 }
 
-.ml481ModalActions {
+.cm20ModalActions {
     bottom: 2px;
     margin-bottom: 10px;
     width: 100%;
 }
 
-.ml978ActionsContainer {
+.cm20ActionsContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.cm20CloseBtn {
+
+.cm20CloseBtnDiv {
     display: flex;
     justify-content: flex-end;
 }
+
+
 .cm20CloseBtn {
+    display: flex;
     cursor: pointer;
     font-weight: 500;
     padding: 4px 8px;
@@ -126,12 +132,12 @@
     border: none;
     font-size: 18px;
     color: #ffffff;
-    background: #242B2E;
+    background: #B4161B;
     transition: all 0.25s ease;
     align-self: flex-end;
 }
 
-.ml012createBtn {
+.cm20createBtn {
     width: 74%;
     padding: 13px 9px;
     border-radius: 9px;
@@ -143,7 +149,7 @@
     cursor: pointer;
 }
 
-.ml012createBtn:hover {
+.cm20createBtn:hover {
     box-shadow: 0 5px 5px -5px rgba(73, 73, 73, 0.6);
     transform: translateY(-1px);
 }

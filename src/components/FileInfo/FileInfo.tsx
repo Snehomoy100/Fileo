@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 
-import { deleteItem } from "../../redux/actionCreators/fileFolderActionCreators";
+import { deleteAnyItem } from "../../redux/actionCreators/fileFolderActionCreators";
 import { DataTypes } from "../../types/CustomInterfaces";
 
 import "./fileInfo.css";
@@ -34,7 +34,7 @@ const FileInfo = ({
   };
 
   const handleDeleteClick = () => {
-    dispatch(deleteItem(id));
+    dispatch(deleteAnyItem(id));
   };
 
 

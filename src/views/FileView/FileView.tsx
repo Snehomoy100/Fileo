@@ -18,7 +18,7 @@ const FileView = () => {
   const [page, setPage] = useState(1);
   const [error, setError] = useState("");
 
-  const API_KEY = "CU5Tu16fnl7ZXpw90r4tzfPSQEI501KkWWyQiRHF4ng";
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   const getPhotos = async () => {
     setError("");

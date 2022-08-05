@@ -39,7 +39,7 @@ const intitialState = {
 };
 
 
-const addRecursive = (obj: any, parent: any, id: string, item: any) => {
+const addFileFolderRecursive = (obj: any, parent: any, id: string, item: any) => {
   if (obj.id === id) {
     {
       const alreadyPresentInParent = obj?.children?.find(
@@ -57,13 +57,13 @@ const addRecursive = (obj: any, parent: any, id: string, item: any) => {
       return;
     }
   }
-  for (var k in obj.children) {
-    addRecursive(obj.children[k], obj, id, item);
+  for (let iterator in obj.children) {
+    addFileFolderRecursive(obj.children[iterator], obj, id, item);
   }
 };
 
 
-const deleteRecursive = (obj: any, parent: any, id: string) => {
+const deleteFileFolderRecursive = (obj: any, parent: any, id: string) => {
   if (obj?.id === id) {
     {
       const newChildren = parent?.children.filter(
@@ -74,7 +74,7 @@ const deleteRecursive = (obj: any, parent: any, id: string) => {
     }
   }
   for (let iterator in obj.children) {
-    if (obj && obj.children[iterator]) deleteRecursive(obj.children[iterator], obj, id);
+    if (obj && obj.children[iterator]) deleteFileFolderRecursive(obj.children[iterator], obj, id);
   }
 };
 
@@ -85,15 +85,15 @@ const fileFolderReducer = (state = intitialState, action: any) => {
     case types.CREATE_ITEM:
       const { createInside, item } = action.payload;
       const newState = { ...state };
-      addRecursive(newState, newState, createInside, item);
+      addFileFolderRecursive(newState, newState, createInside, item);
       return newState;
     case types.DELETE_ITEM:
       const deleteThis = action.payload;
       const newState2 = { ...state };
-      deleteRecursive(newState2, state, deleteThis);
+      deleteFileFolderRecursive(newState2, state, deleteThis);
       return newState2;
   }
-  
+
   return state;
 };
 

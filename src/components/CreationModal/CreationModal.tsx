@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createItem } from "../../redux/actionCreators/fileFolderActionCreators";
+import { createAnyItem } from "../../redux/actionCreators/fileFolderActionCreators";
 import { getUid } from "../../utils/getUid";
 
 
 import "./creationModal.css";
-
-// props declaration
-type props = {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
 
 
 const CreationModal = ({ setIsOpen }: props) => {
@@ -38,7 +33,7 @@ const CreationModal = ({ setIsOpen }: props) => {
       creator: authorName,
       createdAt: new Date().toLocaleDateString(),
     };
-    dispatch(createItem({ createInside: createInside, item: data }));
+    dispatch(createAnyItem({ createInside: createInside, item: data }));
     setIsOpen(false);
   };
 
@@ -55,7 +50,7 @@ const CreationModal = ({ setIsOpen }: props) => {
     };
 
 
-    dispatch(createItem({ createInside: createInside, item: data }));
+    dispatch(createAnyItem({ createInside: createInside, item: data }));
     setIsOpen(false);
   };
 
@@ -65,7 +60,7 @@ const CreationModal = ({ setIsOpen }: props) => {
       <div className="cm20Centered">
         <div className="cm20Modal">
           <div className=".cm20ModalHeader">
-            <div className="cm20CloseBtn">
+            <div className="cm20CloseBtnDiv">
               <button
                 className="cm20CloseBtn"
                 onClick={() => setIsOpen(false)}
@@ -78,48 +73,52 @@ const CreationModal = ({ setIsOpen }: props) => {
           <div className="cm20FileOrFolder">
             <span
               onClick={() => setCanCreateFile(0)}
-              className={`cm20Btn ml291FolderButton ${
-                canCreateFile == 0 ? "ml129ActiveBtn" : ""
+              className={`cm20Btn cm20FolderButton ${
+                canCreateFile == 0 ? "cm20ActiveBtn" : ""
               }`}
             >
               Folder
             </span>
             <span
               onClick={() => setCanCreateFile(1)}
-              className={`ml094Btn ml294FileButton ${
-                canCreateFile == 1 ? "ml129ActiveBtn" : ""
+              className={`cm20Btn cm20FileButton ${
+                canCreateFile == 1 ? "cm20ActiveBtn" : ""
               }`}
             >
               File
             </span>
           </div> 
-          <div className="ml291ModalContent">
+          <div className="cm20ModalContent">
             <input
-              className="ml501ModalInput"
-              placeholder="Name"
-              onChange={(e) => setItemName(e.target.value)}
+              className="cm20ModalInput"
+              required
+              placeholder="Enter name: "
+              onChange={(e) => {
+                e.preventDefault();
+                setItemName(e.target.value);
+              }}
             />
             <br />
             <input
-              className="ml501ModalInput"
-              placeholder="Type"
+              className="cm20ModalInput"
+              placeholder="Enter Type: "
               onChange={(e) => setExactType(e.target.value)}
             />
             <br />
             <input
-              className="ml501ModalInput"
-              placeholder="Creator"
+              className="cm20ModalInput"
+              placeholder="Enter creator's name: "
               onChange={(e) => setAuthorName(e.target.value)}
             />
           </div>
-          <div className="ml481ModalActions">
-            <div className="ml978ActionsContainer">
+          <div className="cm20ModalActions">
+            <div className="cm20ActionsContainer">
               {canCreateFile == 1 ? (
-                <button onClick={handleFileCreation} className="ml012createBtn">
+                <button onClick={handleFileCreation} className="cm20createBtn">
                   Create File
                 </button>
               ) : (
-                <button onClick={handleCreateFolder} className="ml012createBtn">
+                <button onClick={handleCreateFolder} className="cm20createBtn">
                   Create Folder
                 </button>
               )}
@@ -131,6 +130,11 @@ const CreationModal = ({ setIsOpen }: props) => {
   );
 };
 
+
+// props declaration
+type props = {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
 
 export default CreationModal;
