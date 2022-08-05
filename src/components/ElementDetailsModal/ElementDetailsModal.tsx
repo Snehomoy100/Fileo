@@ -5,7 +5,7 @@ import "./elementDetailsModal.css";
 const DetailsModal = ({ setIsOpen, item }: propTypes) => {
   return (
     <>
-      <div className="darkBG" onClick={() => setIsOpen(false)} />
+      <div onClick={() => setIsOpen(false)} />
       <div className="centered">
         <div className="modal">
           <div className="modalHeader">

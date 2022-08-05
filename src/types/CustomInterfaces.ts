@@ -1,4 +1,3 @@
-
 export type DataTypes = {
     children: DataTypes[];
     path: [{ name: string, id: string }];

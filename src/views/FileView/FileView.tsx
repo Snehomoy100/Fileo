@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import CommonLoader from "../../components/CommonLoader/CommonLoader";
-
+import CantFind from "./CantFind";
 import "../../components/CommonLoader/commonLoader.css";
+import "./fileView.css";
 
 const FileView = () => {
 
@@ -59,15 +60,16 @@ const FileView = () => {
     setTempImage(imgSrc);
     setModal(true);
   };
+
   if (error.length === 0) {
     return (
       <InfiniteScroll
-        dataLength={data.length}
+        dataLength={data.length} //This is important field to render the next data
         next={getPhotos}
         hasMore={hasMore}
-        height={"100vh"}
+        height={"90vh"}
         loader={<CommonLoader />}
-        endMessage={<h1>Oops..! Couldn't find anything</h1>}
+        endMessage={<CantFind />}
       >
         <>
           <div className={modal ? "fc267Modal fc781Open" : "fc267Modal"}>
