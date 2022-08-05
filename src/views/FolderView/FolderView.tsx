@@ -2,7 +2,11 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import DashboardElements from "../../components/DashboardElements/DashboardElements";
+import vacantFolder from "../../assets/vacantFolder.svg";
 import { DataTypes, GlobalTypes } from "../../types/CustomInterfaces";
+
+import "./folderView.css"; 
+
 
 const FolderView = (): JSX.Element => {
   
@@ -29,7 +33,12 @@ const FolderView = (): JSX.Element => {
       </div>
     );
   }
-  return <div>Empty folder, Add something...!</div>;
+  return (
+    <div className="fc881NotFoundContainer">
+      <img className="fc888Image" src={vacantFolder} alt="emptyFolder" />
+      <h2>Empty folder</h2>
+    </div>
+  )
 };
 
 export default FolderView;

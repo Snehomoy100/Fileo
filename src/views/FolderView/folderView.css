@@ -1,0 +1,13 @@
+.fc881NotFoundContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(20%);
+}
+.fc888Image{
+    width: 100%;
+    height:400px;
+    object-fit: contain;
+    margin-bottom:20px ;
+}

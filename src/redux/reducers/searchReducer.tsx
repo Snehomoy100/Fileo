@@ -1,22 +1,20 @@
-import { useSelector } from "react-redux";
-
 const intitialState = {
   query: "",
   searchResults: [],
 };
 
-const searchRecursive = (state: any, results: any, query: string) => {
+const recursiveSearch = (state: any, results: any, query: string) => {
   query = query.toLowerCase();
   const stName = state.name.toLowerCase();
   if (query && query !== "" && stName.includes(query)) {
     results.push(state);
   }
   for (let iterator in state?.children) {
-    searchRecursive(state.children[iterator], results, query);
+    recursiveSearch(state.children[iterator], results, query);
   }
 };
 
-const searchReducer = (state = intitialState, action: any) => {
+const searchResultReducer = (state = intitialState, action: any) => {
   switch (action.type) {
     case "SET_QUERY":
       const results = [] as any;
@@ -29,7 +27,7 @@ const searchReducer = (state = intitialState, action: any) => {
 
         
       }
-      searchRecursive(
+      recursiveSearch(
         action.payload?.globalState,
         results,
         action.payload?.query
@@ -46,4 +44,6 @@ const searchReducer = (state = intitialState, action: any) => {
       return state;
   }
 };
-export default searchReducer;
+
+
+export default searchResultReducer;

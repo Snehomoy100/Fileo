@@ -2,7 +2,8 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-right: -10px;
     margin-left: -10px;

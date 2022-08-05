@@ -64,7 +64,7 @@ const FileView = () => {
   if (error.length === 0) {
     return (
       <InfiniteScroll
-        dataLength={data.length} //This is important field to render the next data
+        dataLength={data.length} 
         next={getPhotos}
         hasMore={hasMore}
         height={"90vh"}
