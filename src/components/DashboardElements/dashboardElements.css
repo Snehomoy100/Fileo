@@ -2,6 +2,7 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin-right: -10px;
     margin-left: -10px;
