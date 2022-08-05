@@ -1,10 +1,9 @@
-
 import "./commonLoader.css";
 
 const CommonLoader = () => {
   return (
-    <div className="spinner">
-        <div className="circle"></div>
+    <div className="cl100Spinner">
+        <div className="cl100Circle"></div>
     </div>
   );
 };

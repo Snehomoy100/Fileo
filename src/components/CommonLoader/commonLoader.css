@@ -1,4 +1,4 @@
-.spinner{
+.cl100Spinner{
     width: 200px;
     height: 200px;
     border-top: 20px solid #1aff1a;
@@ -10,7 +10,9 @@
     animation-timing-function: linear;
     justify-content: center;
 }
-.circle{
+
+
+.cl100Circle{
     width: 20px;
     height: 20px;
     background-color: #1aff1a;
@@ -18,6 +20,8 @@
     margin-left: 155px;
     margin-top: 8px;
 }
+
+
 @keyframes spinner{
     100%{
         transform: rotate(360deg);

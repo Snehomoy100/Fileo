@@ -29,7 +29,7 @@ const DashboardElements = ({ items }: propTypes) => {
 
   const getFolderIcon = (name: string) => {
     if(name) {
-      return <img src={homeFolder} className="di019Image" alt="home" />;
+      return <img src={homeFolder} className="de500Pic" alt="home" />;
     }
 
   };
@@ -65,8 +65,8 @@ const DashboardElements = ({ items }: propTypes) => {
   );
 
   
-  return (
-    <div className="di204Row">
+  return ( 
+    <div className="de500Row">
       {open && (
         <FileInfo
           setOpen={setOpen}
@@ -87,21 +87,21 @@ const DashboardElements = ({ items }: propTypes) => {
             handleDoubleClick(item.name, item.id, item.isFolder)
           }
           key={idx}
-          className="di123Col"
+          className="de500Column"
         >
           {item.isFolder ? (
-            <div className="di039ColContainer">
+            <div className="de500ColumnContainer">
               {item.isAdmin === true ? (
                 getFolderIcon(item.name)
               ) : (
-                <img src={folder} className="di019Image" />
+                <img src={folder} className="de500Pic" />
               )}
-              <div className="di029ItemName">{item.name}</div>
+              <div className="de500ItemsName">{item.name.slice(0, 8)}</div>
             </div>
           ) : (
-            <div className="di039ColContainer">
-              <img className="di019Image" src={fileIcon} />
-              <div className="di029ItemName">{item.name}</div>
+            <div className="de500ColumnContainer">
+              <img className="de500Pic" src={fileIcon} />
+              <div className="de500ItemsName">{item.name.slice(0, 8)}</div>
             </div>
           )}
         </div>

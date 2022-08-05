@@ -41,7 +41,7 @@ const SideBar = ({ data }: propTypes) => {
         <>
           <div className="sb30Item" onClick={() => handleClick(data)}>
             <div className="sb30ImageContainer">{getFolderIcon(data)}</div>
-            <div className="sb30ItemText">{data.name}</div>
+            <div className="sb30ItemText">{data.name.slice(0 ,8)}</div>
           </div>
           <div>
             {data.children.map((item: DataTypes, idx: number) => (
@@ -58,7 +58,7 @@ const SideBar = ({ data }: propTypes) => {
             onClick={() => navigate(`/file/${data.name}/${data.id}`)}
           >
             <img className="sb30ItemIcon" src={fileIcon} alt="file" />
-            <p className="sb30ItemText">{data.name} </p>
+            <p className="sb30ItemText">{data.name.slice(0, 8)} </p>
           </div>
         </>
 

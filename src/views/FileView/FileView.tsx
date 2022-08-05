@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import CommonLoader from "../../components/CommonLoader/CommonLoader";
-import CantFind from "./CantFind";
+import CantFind from "../CantFind/CantFind";
 import "../../components/CommonLoader/commonLoader.css";
 import "./fileView.css";
 

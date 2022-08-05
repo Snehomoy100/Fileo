@@ -1,9 +1,7 @@
-.di204Row {
+.de500Row {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
     flex-wrap: wrap;
     margin-right: -10px;
     margin-left: -10px;
@@ -12,7 +10,9 @@
     padding-left: 5px;
 
 }
-.di123Col {
+
+
+.de500Column {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -21,25 +21,26 @@
     width: 130px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
     height: 100px;
     margin: 10px;
     background-color: #E5D68A;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-     border-radius: 10px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.di123Col:hover {
+.de500Column:hover {
     background-color: aliceblue;
 }
 
-.di019Image{
-    width: 50px;
+.de500Pic{
+    width: 60px;
 }
 
-.di039ColContainer{
+.de500ColumnContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -48,7 +49,7 @@
 }
 
 
-.di029ItemName {
+.de500ItemsName {
     margin-top: 12px;
     font-size: 0.9rem;
 }
