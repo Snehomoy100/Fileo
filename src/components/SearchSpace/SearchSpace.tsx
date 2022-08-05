@@ -12,7 +12,7 @@ const SearchSpace = () => {
     return (
       <div className="ss40CouldntFindContainer">
         <img src={noResultsFound} alt="no result" className="ss40CouldntFoundImage" />
-        <h2>Oops...! No results found</h2>
+        <h2>Holaaaaa...!</h2>
       </div>
     );
   }
