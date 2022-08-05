@@ -11,7 +11,7 @@ import FolderView from "./views/FolderView/FolderView";
 import CreationModal from "./components/CreationModal/CreationModal";
 
 
-import "./app.css";
+import "./App.css";
 
 
 import { GlobalTypes } from "./types/CustomInterfaces";
