@@ -1,6 +1,7 @@
 import { applyMiddleware, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
+
 import rootReducer from "./reducers";
 
 let persistedState;
@@ -10,6 +11,7 @@ if (localStorage.getItem("reduxState")) {
     ? JSON.parse(tempState)
     : {};
 }
+
 const store = createStore(
   rootReducer,
   persistedState,

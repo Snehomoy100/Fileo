@@ -44,6 +44,7 @@ const FileView = () => {
         setError(err.response.data);
       });
   };
+  
   useEffect(() => {
     setData([]);
     setLoading(false);

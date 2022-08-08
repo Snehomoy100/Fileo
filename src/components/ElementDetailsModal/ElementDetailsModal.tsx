@@ -1,4 +1,4 @@
-import { DataTypes } from "../../types/CustomInterfaces";
+import { DataTypes } from "../../types/CustomTypes";
 
 import "./elementDetailsModal.css";
 
@@ -18,7 +18,7 @@ const DetailsModal = ({ setIsOpen, item }: propTypes) => {
             <div className="row">
               <div className="column">
                 <div className="left">Name</div>
-                <div className="right">{item.name}</div>
+                <div className="right">{item.name.slice(0, 8)}</div>
               </div>
             </div>
             <div className="row">

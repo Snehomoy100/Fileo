@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 
 import DashboardElements from "../../components/DashboardElements/DashboardElements";
 import vacantFolder from "../../assets/vacantFolder.svg";
-import { DataTypes, GlobalTypes } from "../../types/CustomInterfaces";
+import { DataTypes, GlobalTypes } from "../../types/CustomTypes";
 
 import "./folderView.css"; 
-
 
 const FolderView = (): JSX.Element => {
   

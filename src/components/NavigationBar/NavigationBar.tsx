@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { DataTypes, GlobalTypes } from "../../types/CustomInterfaces";
+import { DataTypes, GlobalTypes } from "../../types/CustomTypes";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import { setQuery } from "../../redux/actionCreators/searchActionCreator";
 

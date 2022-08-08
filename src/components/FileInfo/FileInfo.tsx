@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 
+import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import { deleteAnyItem } from "../../redux/actionCreators/fileFolderActionCreators";
-import { DataTypes } from "../../types/CustomInterfaces";
+import { DataTypes } from "../../types/CustomTypes";
 
 import "./fileInfo.css";
 
@@ -57,6 +57,7 @@ const FileInfo = ({
   );
 };
 
+
 type propTypes = {
   cordinates: { x: number; y: number };
   item: DataTypes;
@@ -64,5 +65,6 @@ type propTypes = {
   setShowDetailsOfItem: React.Dispatch<React.SetStateAction<DataTypes>>;
   setOpenDetails: React.Dispatch<React.SetStateAction<boolean>>;
 };
+
 
 export default FileInfo;

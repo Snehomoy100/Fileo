@@ -46,10 +46,12 @@ const addFileFolderRecursive = (obj: any, parent: any, id: string, item: any) =>
         (child: any) =>
           child.name === item.name && child.isFolder === item.isFolder
       );
+      
       if (alreadyPresentInParent) {
         alert("This already exists over here..!");
         return;
       }
+
       const pathTillParent = obj.path;
       const newPath = [...pathTillParent, { name: item.name, link: item.id }];
       const newItem = { ...item, path: newPath };

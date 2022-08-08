@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
+
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import SideBar from "./components/SideBar/SideBar";
 import SearchSpace from "./components/SearchSpace/SearchSpace";
@@ -9,13 +10,12 @@ import HomeView from "./views/HomeView/HomeView";
 import FileView from "./views/FileView/FileView";
 import FolderView from "./views/FolderView/FolderView";
 import CreationModal from "./components/CreationModal/CreationModal";
+import { GlobalTypes } from "./types/CustomTypes";
+import { changeFolder } from "./redux/actionCreators/currentFolderActionCreator";
 
 
 import "./App.css";
 
-
-import { GlobalTypes } from "./types/CustomInterfaces";
-import { changeFolder } from "./redux/actionCreators/currentFolderActionCreator";
 
 const App = () => {
 
@@ -35,6 +35,7 @@ const App = () => {
     }
   }, [searchQuery]);
   
+
   return (
     <div className="app10AppComponent">
       {open && <CreationModal setIsOpen={setOpen} />}

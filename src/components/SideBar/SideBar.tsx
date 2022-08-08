@@ -1,8 +1,7 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { DataTypes } from "../../types/CustomInterfaces";
+import { DataTypes } from "../../types/CustomTypes";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import folder from "../../assets/folder.png";
 import fileIcon from "../../assets/fileIcon.png";
