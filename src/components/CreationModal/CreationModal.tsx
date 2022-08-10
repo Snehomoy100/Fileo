@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { createAnyItem } from "../../redux/actionCreators/fileFolderActionCreators";
 import { getUid } from "../../utils/getUid";
 
@@ -132,6 +133,7 @@ const CreationModal = ({ setIsOpen }: props) => {
 
 
 // props declaration
+// TODO: Capitalize types
 type props = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
