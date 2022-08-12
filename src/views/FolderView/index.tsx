@@ -33,8 +33,8 @@ const FolderView = (): JSX.Element => {
     );
   }
   return (
-    <div className="fc881NotFoundContainer">
-      <img className="fc888Image" src={vacantFolder} alt="emptyFolder" />
+    <div className="fv500NotFoundContainer">
+      <img className="fv500Image" src={vacantFolder} alt="emptyFolder" />
       <h2>Empty folder</h2>
     </div>
   )

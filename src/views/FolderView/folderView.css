@@ -1,11 +1,12 @@
-.fc881NotFoundContainer{
+.fv500NotFoundContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transform: translateY(20%);
 }
-.fc888Image{
+
+.fv500Image{
     width: 100%;
     height:400px;
     object-fit: contain;

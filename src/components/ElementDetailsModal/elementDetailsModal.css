@@ -1,11 +1,11 @@
-.centered {
+.dm300Center {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.modal {
+.dm300Modal {
     width: 250px;
     height: 170px;
     background: white;
@@ -17,7 +17,7 @@
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
 }
 
-.modalHeader {
+.dm300ModalHeader {
     height: 50px;
     background: white;
     overflow: hidden;
@@ -25,7 +25,7 @@
     border-top-right-radius: 16px;
 }
 
-.heading {
+.dm300Heading {
     margin: 0;
     padding: 10px;
     color: #2c3e50;
@@ -34,27 +34,27 @@
     text-align: center;
 }
 
-.modalContent {
+.dm300ModalContent {
     padding: 10px;
     font-size: 14px;
     color: #2c3e50;
     text-align: center;
 }
 
-.modalActions {
+.dm300ModalActions {
     position: absolute;
     bottom: 2px;
     margin-bottom: 10px;
     width: 100%;
 }
 
-.actionsContainer {
+.dm300ActionsContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.closeBtn {
+.dm300CloseButton {
     cursor: pointer;
     font-weight: 500;
     padding: 4px 8px;
@@ -73,7 +73,7 @@
     margin-right: -7px;
 }
 
-.closeBtn:hover {
+.dm300CloseButton:hover {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     transform: translate(-4px, 4px);
 }
@@ -115,10 +115,12 @@
     transform: none;
     background: whitesmoke;
 }
-.column{
+
+.dm300Column {
     display: flex;
     flex-direction: row;
 }
-.right{
+
+.dm300Right {
     margin-left: auto;
 }

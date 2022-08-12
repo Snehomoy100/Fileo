@@ -6,45 +6,45 @@ const DetailsModal = ({ setIsOpen, item }: PropTypes) => {
   return (
     <>
       <div onClick={() => setIsOpen(false)} />
-      <div className="centered">
-        <div className="modal">
-          <div className="modalHeader">
-            <h4 className="heading">Details</h4>
+      <div className="dm300Center">
+        <div className="dm300Modal">
+          <div className="dm300ModalHeader">
+            <h4 className="dm300Heading">Details</h4>
           </div>
-          <button className="closeBtn" onClick={() => setIsOpen(false)}>
+          <button className="dm300CloseButton" onClick={() => setIsOpen(false)}>
             Close
           </button>
-          <div className="modalContent">
-            <div className="row">
-              <div className="column">
-                <div className="left">Name</div>
-                <div className="right">{item.name.slice(0, 8)}</div>
+          <div className="dm300ModalContent">
+            <div className="dm300Row">
+              <div className="dm300Column">
+                <div className="dm300Left">Name</div>
+                <div className="dm300Right">{item.name.slice(0, 8)}</div>
               </div>
             </div>
-            <div className="row">
-              <div className="column">
-                <div className="left">Items contained</div>
-                <div className="right">{item.children?.length || 0}</div>
+            <div className="dm300Row">
+              <div className="dm300Column">
+                <div className="dm300Left">Items contained</div>
+                <div className="dm300Right">{item.children?.length || 0}</div>
               </div>
             </div>
-            <div className="row">
-              <div className="column">
-                <div className="left">Exact Type</div>
-                <div className="right">
+            <div className="dm300Row">
+              <div className="dm300Column">
+                <div className="dm300Left">Exact Type</div>
+                <div className="dm300Right">
                   {item.type?.length == 0 ?( <p>Common</p>) : (<p>{item.type}</p>)}
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="column">
-                <div className="left">Created on</div>
-                <div className="right">{item.createdAt}</div>
+            <div className="dm300Row">
+              <div className="dm300Column">
+                <div className="dm300Left">Created on</div>
+                <div className="dm300Right">{item.createdAt}</div>
               </div>
             </div>
-            <div className="row">
-              <div className="column">
-                <div className="left">Author</div>
-                <div className="right">
+            <div className="dm300Row">
+              <div className="dm300Column">
+                <div className="dm300Left">Author</div>
+                <div className="dm300Right">
                   {item.creator.length == 0 ? (
                     <>Guest User</>
                   ) : (
@@ -54,8 +54,8 @@ const DetailsModal = ({ setIsOpen, item }: PropTypes) => {
               </div>
             </div>
           </div>
-          <div className="modalActions">
-            <div className="actionsContainer"></div>
+          <div className="dm300ModalActions">
+            <div className="dm300ActionsContainer"></div>
           </div>
         </div>
       </div>
