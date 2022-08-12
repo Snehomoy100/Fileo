@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import DashboardElements from "../../components/DashboardElements/DashboardElements";
+import DashboardElements from "../../components/DashboardElements/index";
 import vacantFolder from "../../assets/vacantFolder.svg";
-import { DataTypes, GlobalTypes } from "../../types/CustomTypes";
+import { DataTypes, GlobalTypes } from "../../utils/CustomTypes";
 
 import "./folderView.css"; 
 

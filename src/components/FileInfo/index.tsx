@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import { deleteAnyItem } from "../../redux/actionCreators/fileFolderActionCreators";
-import { DataTypes } from "../../types/CustomTypes";
+import { DataTypes } from "../../utils/CustomTypes";
 
 import "./fileInfo.css";
 

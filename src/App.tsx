@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
 
-import NavigationBar from "./components/NavigationBar/NavigationBar";
-import SideBar from "./components/SideBar/SideBar";
-import SearchSpace from "./components/SearchSpace/SearchSpace";
-import HomeView from "./views/HomeView/HomeView";
-import FileView from "./views/FileView/FileView";
-import FolderView from "./views/FolderView/FolderView";
-import CreationModal from "./components/CreationModal/CreationModal";
-import { GlobalTypes } from "./types/CustomTypes";
+import NavigationBar from "./components/NavigationBar/index";
+import SideBar from "./components/SideBar/index";
+import SearchSpace from "./components/SearchSpace/index";
+import HomeView from "./views/HomeView/index";
+import FileView from "./views/FileView/index";
+import FolderView from "./views/FolderView/index";
+import CreationModal from "./components/CreationModal/index";
+import { GlobalTypes } from "./utils/CustomTypes";
 import { changeFolder } from "./redux/actionCreators/currentFolderActionCreator";
 
 

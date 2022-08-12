@@ -3,8 +3,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import CommonLoader from "../../components/CommonLoader/CommonLoader";
-import CantFind from "../CantFind/CantFind";
+import CommonLoader from "../../components/CommonLoader/index";
+import CantFind from "../CantFind/index";
 import "../../components/CommonLoader/commonLoader.css";
 import "./fileView.css";
 

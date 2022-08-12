@@ -1,4 +1,4 @@
-import DashboardElements from "../../components/DashboardElements/DashboardElements";
+import DashboardElements from "../../components/DashboardElements/index";
 
 
 const HomeView = ({children}:any) => {

@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { DataTypes } from "../../types/CustomTypes";
+import { DataTypes } from "../../utils/CustomTypes";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
-import DetailsModal from "../ElementDetailsModal/ElementDetailsModal";
-import FileInfo from "../FileInfo/FileInfo";
+import DetailsModal from "../ElementDetailsModal/index";
+import FileInfo from "../FileInfo/index";
 import homeFolder from "../../assets/homeFolder.png";
 import fileIcon from "../../assets/fileIcon.png";
 import folder from "../../assets/folder.png";

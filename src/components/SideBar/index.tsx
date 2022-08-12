@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { DataTypes } from "../../types/CustomTypes";
+import { DataTypes } from "../../utils/CustomTypes";
 import { changeFolder } from "../../redux/actionCreators/currentFolderActionCreator";
 import folder from "../../assets/folder.png";
 import fileIcon from "../../assets/fileIcon.png";

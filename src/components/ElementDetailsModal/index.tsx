@@ -1,4 +1,4 @@
-import { DataTypes } from "../../types/CustomTypes";
+import { DataTypes } from "../../utils/CustomTypes";
 
 import "./elementDetailsModal.css";
 
