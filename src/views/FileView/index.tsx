@@ -8,7 +8,7 @@ import CantFind from "../CantFind/index";
 import "../../components/CommonLoader/commonLoader.css";
 import "./fileView.css";
 
-const FileView = () => {
+const FileComponent = () => {
 
   const { query } = useParams();
 
@@ -105,4 +105,4 @@ const FileView = () => {
   }
 };
 
-export default FileView;
+export default FileComponent;

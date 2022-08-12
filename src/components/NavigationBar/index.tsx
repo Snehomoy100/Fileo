@@ -74,7 +74,7 @@ const NavigationBar = ({ setIsOpen }: PropTypes) => {
               }`}
               onClick={() => handleOnClick(item.link)}
             >
-              {item.name} {` `}
+              {item.name.slice(0, 8)} {` `}
               {`>  `}
               {` `}
             </span>

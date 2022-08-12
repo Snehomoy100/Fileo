@@ -66,7 +66,7 @@ const SideBar = ({ data }: PropTypes) => {
   );
 }
 
-interface PropTypes {
+type PropTypes = {
   data: DataTypes;
 }
 

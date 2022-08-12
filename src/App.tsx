@@ -7,7 +7,7 @@ import NavigationBar from "./components/NavigationBar/index";
 import SideBar from "./components/SideBar/index";
 import SearchSpace from "./components/SearchSpace/index";
 import HomeView from "./views/HomeView/index";
-import FileView from "./views/FileView/index";
+import FileComponent from "./views/FileView/index";
 import FolderView from "./views/FolderView/index";
 import CreationModal from "./components/CreationModal/index";
 import { GlobalTypes } from "./utils/CustomTypes";
@@ -56,7 +56,7 @@ const App = () => {
           )}
 
           <Route path="/:folderId" element={<FolderView />} />
-          <Route path="/file/:query/:fileId" element={<FileView />} />
+          <Route path="/file/:query/:fileId" element={<FileComponent />} />
         </Routes>
       </div>
     </div>
