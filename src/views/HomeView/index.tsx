@@ -1,11 +1,11 @@
 import DashboardElements from "../../components/DashboardElements/index";
 
 
-const HomeView = ({children}:any) => {
+const HomeView = ({ allThefilesAndFolders }: any) => {
 
   return (
     <div>
-      <DashboardElements items={children} />
+      <DashboardElements items={allThefilesAndFolders} />
     </div>
   );
 };

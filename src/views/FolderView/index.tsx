@@ -11,6 +11,7 @@ const FolderView = (): JSX.Element => {
   
   const { folderId } = useParams();
   let allFoldersHere: DataTypes = {} as DataTypes;
+
   const eachRecursive = (obj: DataTypes, id: string | undefined) => {
     if (obj.id === id) {
       {

@@ -27,6 +27,7 @@ const App = () => {
   const { rootFolderDetails } = useSelector((state: GlobalTypes) => ({
     rootFolderDetails: state.fileFolder,
   }));
+
   const navigatge = useNavigate();
   useEffect(() => {
     if (searchQuery.length > 0) {
@@ -51,7 +52,7 @@ const App = () => {
           ) : (
             <Route
               path="/"
-              element={<HomeView children={rootFolderDetails.children} />}
+              element={<HomeView allThefilesAndFolders={rootFolderDetails.children} />}
             />
           )}
 

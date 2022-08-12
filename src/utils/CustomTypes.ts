@@ -1,5 +1,4 @@
 export type DataTypes = {
-    children: DataTypes[];
     path: [{ name: string, id: string }];
     isAdmin: boolean;
     isFolder: boolean;
@@ -8,16 +7,18 @@ export type DataTypes = {
     type: string;
     createdAt: string;
     creator: string;
-}
-
-
-export type GlobalTypes = {
-    currentFolder: string;
-    fileFolder: DataTypes;  
-    search: SearchType 
+    children: DataTypes[];
 }
 
 type SearchType = {
     query: string;
     searchResult: DataTypes[];
 }
+
+
+export type GlobalTypes = {
+    fileFolder: DataTypes; 
+    currentFolder: string; 
+    search: SearchType 
+}
+

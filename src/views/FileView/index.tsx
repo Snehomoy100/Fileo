@@ -17,6 +17,8 @@ const FileComponent = () => {
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(1);
   const [error, setError] = useState("");
+  const [modal, setModal] = useState(false);
+  const [tempImage, setTempImage] = useState("");
 
   const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -51,11 +53,10 @@ const FileComponent = () => {
     setError("");
     getPhotos();
   }, [query]);
+
   useEffect(() => {
     getPhotos();
   }, []);
-  const [modal, setModal] = useState(false);
-  const [tempImage, setTempImage] = useState("");
 
   const getImg = (imgSrc: string) => {
     setTempImage(imgSrc);

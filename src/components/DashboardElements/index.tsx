@@ -13,8 +13,13 @@ import folder from "../../assets/folder.png";
 import "./dashboardElements.css";
 
 const DashboardElements = ({ items }: PropTypes) => {
+
   const [open, setOpen] = useState(false);
   const [itemRightClicked, setItemRightClicked] = useState<DataTypes>(
+    {} as DataTypes
+  );
+  const [openDetails, setOpenDetails] = useState(false);
+  const [showDetailsOfItem, setShowDetailsOfItem] = useState<DataTypes>(
     {} as DataTypes
   );
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
@@ -57,12 +62,6 @@ const DashboardElements = ({ items }: PropTypes) => {
     e.preventDefault();
     setOpen(false);
   };
-
-
-  const [openDetails, setOpenDetails] = useState(false);
-  const [showDetailsOfItem, setShowDetailsOfItem] = useState<DataTypes>(
-    {} as DataTypes
-  );
 
   
   return ( 
