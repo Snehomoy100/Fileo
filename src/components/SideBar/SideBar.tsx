@@ -16,7 +16,7 @@ const getFolderIcon = (data: DataTypes) => {
   } 
 };
 
-const SideBar = ({ data }: propTypes) => {
+const SideBar = ({ data }: PropTypes) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -66,7 +66,7 @@ const SideBar = ({ data }: propTypes) => {
   );
 }
 
-interface propTypes {
+interface PropTypes {
   data: DataTypes;
 }
 

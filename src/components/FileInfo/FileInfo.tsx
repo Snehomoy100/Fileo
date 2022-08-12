@@ -13,7 +13,7 @@ const FileInfo = ({
   setOpen,
   setShowDetailsOfItem,
   setOpenDetails
-}: propTypes) => {
+}: PropTypes) => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -58,7 +58,7 @@ const FileInfo = ({
 };
 
 
-type propTypes = {
+type PropTypes = {
   cordinates: { x: number; y: number };
   item: DataTypes;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;

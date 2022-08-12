@@ -12,7 +12,7 @@ import folder from "../../assets/folder.png";
 
 import "./dashboardElements.css";
 
-const DashboardElements = ({ items }: propTypes) => {
+const DashboardElements = ({ items }: PropTypes) => {
   const [open, setOpen] = useState(false);
   const [itemRightClicked, setItemRightClicked] = useState<DataTypes>(
     {} as DataTypes
@@ -110,7 +110,7 @@ const DashboardElements = ({ items }: propTypes) => {
   );
 };
 
-type propTypes = {
+type PropTypes = {
   items: DataTypes[];
 };
 

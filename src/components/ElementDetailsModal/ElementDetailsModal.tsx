@@ -2,7 +2,7 @@ import { DataTypes } from "../../types/CustomTypes";
 
 import "./elementDetailsModal.css";
 
-const DetailsModal = ({ setIsOpen, item }: propTypes) => {
+const DetailsModal = ({ setIsOpen, item }: PropTypes) => {
   return (
     <>
       <div onClick={() => setIsOpen(false)} />
@@ -63,7 +63,7 @@ const DetailsModal = ({ setIsOpen, item }: propTypes) => {
   );
 };
 
-type propTypes = {
+type PropTypes = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   item: DataTypes;
 };

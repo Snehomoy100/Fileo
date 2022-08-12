@@ -8,7 +8,7 @@ import { getUid } from "../../utils/getUid";
 import "./creationModal.css";
 
 
-const CreationModal = ({ setIsOpen }: props) => {
+const CreationModal = ({ setIsOpen }: Props) => {
 
   const dispatch = useDispatch();
   
@@ -132,9 +132,8 @@ const CreationModal = ({ setIsOpen }: props) => {
 };
 
 
-// props declaration
-// TODO: Capitalize types
-type props = {
+
+type Props = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 

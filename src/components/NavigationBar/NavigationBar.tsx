@@ -9,7 +9,7 @@ import { setQuery } from "../../redux/actionCreators/searchActionCreator";
 import "./navigationBar.css";
 
 
-const NavigationBar = ({ setIsOpen }: propTypes) => {
+const NavigationBar = ({ setIsOpen }: PropTypes) => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -102,7 +102,7 @@ const NavigationBar = ({ setIsOpen }: propTypes) => {
   );
 };
 
-type propTypes = {
+type PropTypes = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
 };
